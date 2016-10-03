@@ -26,8 +26,27 @@
     </div>
   	<div class="container-fluid divindex">
   		<h1 class="pch1">Price Compare</h1>
-      <input type="text" class="form-control search" placeholder="Marca, Modelo, Caracteristicas">
-      <button type="button" class="btn btn-primary btn-lg btn-block">Buscar</button>
+      <!--<input id="producto" type="text" class="form-control search" placeholder="Marca, Modelo, Caracteristicas">
+      <button id="btnProducto" type="button" class="btn btn-primary btn-lg btn-block">Buscar</button>
+       <a href="pages/producto.html"><button type="button" class="btn btn-primary btn-lg btn-block">Buscar</button></a> -->
+
+      <form action="pages/producto.php" method="POST" name="form">
+        <div class="form-group">
+          <input type="text" name="producto" class="form-control search" placeholder="Marca, Modelo, Caracteristicas">
+        </div>        
+        <button type="submit" class="btn btn-primary btn-lg btn-block">Buscar</button>
+      </form>
+
+      <div class="container-fluid alerta">
+        <ins><strong>Prototipo</strong> (Solo buscar los siguientes productos con sus variantes).</ins>
+        <ul>
+          <li>playstation, playstation4, play</li>
+          <li>taladro, makita, herramienta</li>
+          <li>lavadora, linea blanca, samsung</li>
+        </ul>
+      </div>
+
+
 	   </div>
     <footer class="footer">
       <ul class="copyright pch1">
@@ -35,7 +54,7 @@
          <li>Design by Price Compare</a></li>
       </ul>
     </footer>
-    
+
 
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
