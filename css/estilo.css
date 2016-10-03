@@ -1,0 +1,47 @@
+.divindex{
+	padding-right: 240px;
+    padding-left: 240px;
+}
+
+.footer{
+	margin-top: 10%;
+}
+
+.login{
+	margin-left: 90%;
+	margin-top: 1%;
+}
+
+.pch1{
+	text-align: center;
+	padding-bottom: 10rem;
+    padding-top: 6rem;
+}
+
+.search{
+	margin-bottom: 2rem;
+}
+
+/*copyright*/
+footer .copyright {
+    margin: 0;
+    padding: 0;
+ }
+footer .copyright li {
+    display: inline-block;
+    margin: 0;
+    padding: 0;
+    line-height: 24px;
+}
+.ie footer .copyright li {
+   display: inline;
+}
+footer .copyright li:before {
+    content: "\2022";
+    padding-left: 10px;
+    padding-right: 10px;
+    color: #095153;
+}
+footer .copyright  li:first-child:before {
+    display: none;
+}
