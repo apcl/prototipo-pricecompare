@@ -10,6 +10,9 @@
     <!-- Bootstrap -->
     <link href="../css/bootstrap.min.css" rel="stylesheet">
 
+    <!-- Material Design Bootstrap -->
+    <!-- <link rel="stylesheet" type="text/css" href="../MDB/css/mdb.min.css"> -->
+
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
     <!--[if lt IE 9]>
@@ -45,8 +48,9 @@
         switch ($prod) {
           case 'play':
               echo '<img src="../img/ps4.jpg" alt="Playstation 4" class="img-thumbnail img-prod">
+              <canvas id="Chart"></canvas>
               <h3>PLAYSTATION 4 + UNCHARTED: THE NATHAN DRAKE COLLECTION</h3>
-              <table class="table table-hover">
+              <table class="table table-hover table-bordered">
                 <thead>
                   <tr>
                     <th>#</th>
@@ -56,7 +60,7 @@
                   </tr>
                 </thead>
                 <tbody>
-                  <tr>
+                  <tr class="warning">
                     <td>1</td>
                     <td>Ripley</td>
                     <td>$299.990</td>
@@ -82,19 +86,44 @@
                   </tr>
                 </tbody>
               </table>
-
               <h4>Te podría interesar.</h4>
-              <a href="#"><img src="../img/ps4n.jpg" alt="CONSOLA PLAYSTATION 4 + UNCHARTED 4: A THIEF S END" class="img-thumbnail img-prod-int"></a>
-              <a href="#"><img src="../img/xbox.jpg" alt="CONSOLA XBOX ONE 500GB + LEGO BUNDLE" class="img-thumbnail img-prod-int"></a>
-              <a href="#"><img src="../img/wii.jpg" alt="CONSOLA NINTENDO WII U + MARIO KART 8 + SKYLANDER + WII REMOTE + AMIIBO OLIMAR" class="img-thumbnail img-prod-int"></a>
-              <a href="#"><img src="../img/ds.jpg" alt="CONSOLA NINTENDO 3DSXL RED" class="img-thumbnail img-prod-int"></a>
+              <div class="row">
+                <div class="col-sm-6 col-md-4">
+                  <div class="thumbnail">
+                    <img class="img-prod-int" src="../img/ps4n.jpg" alt="CONSOLA PLAYSTATION 4 + UNCHARTED 4: A THIEF S END">
+                    <div class="caption">
+                      <p>CONSOLA PLAYSTATION 4 + UNCHARTED 4</p>
+                      <p><a href="#" class="btn btn-primary" role="button">Ir al producto</a></p>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-sm-6 col-md-4">
+                  <div class="thumbnail">
+                    <img class="img-prod-int" src="../img/xbox.jpg" alt="CONSOLA XBOX ONE 500GB + LEGO BUNDLE">
+                    <div class="caption">
+                      <p>CONSOLA XBOX ONE 500GB + LEGO BUNDLE</p>
+                      <p><a href="#" class="btn btn-primary" role="button">Ir al producto</a></p>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-sm-6 col-md-4">
+                  <div class="thumbnail">
+                    <img class="img-prod-int" src="../img/wii.jpg" alt="CONSOLA NINTENDO WII U + MARIO KART 8">
+                    <div class="caption">
+                      <p>CONSOLA NINTENDO WII U + MARIO KART 8</p>
+                      <p><a href="#" class="btn btn-primary" role="button">Ir al producto</a></p>
+                    </div>
+                  </div>
+                </div>
+              </div>
              </div>';
             break;
 
           case 'taladro':
-              echo '<img src="../img/taladro.jpg" alt="Taladro percutor 20 mm 1010 w hp 2070 f Makita" class="img-thumbnail img-prod">
+              echo '<div><img src="../img/taladro.jpg" alt="Taladro percutor 20 mm 1010 w hp 2070 f Makita" class="img-thumbnail img-prod">
+              <canvas id="Chart"></canvas></div>
               <h3>Taladro percutor 20 mm 1010 w hp 2070 f Makita</h3>
-              <table class="table table-hover">
+              <table class="table table-hover table-bordered">
                 <thead>
                   <tr>
                     <th>#</th>
@@ -104,7 +133,7 @@
                   </tr>
                 </thead>
                 <tbody>
-                  <tr>
+                  <tr class="warning">
                     <td>1</td>
                     <td>Sodimac</td>
                     <td>$158.990</td>
@@ -118,19 +147,43 @@
                   </tr>
                 </tbody>
               </table>
-
               <h4>Te podría interesar.</h4>
-              <a href="#"><img src="../img/t1.jpg" alt="Esmeril agular 115mm GA4534 + Taladro percutor 13mm HP1630K Makita" class="img-thumbnail img-prod-int"></a>
-              <a href="#"><img src="../img/t2.jpg" alt="Taladadro percutor 13 mm 710 w + accesorios HP1630 Makita" class="img-thumbnail img-prod-int"></a>
-              <a href="#"><img src="../img/t3.jpg" alt="Taladro inalambrico percutor + linterna 12 voltz 8271 d Makita" class="img-thumbnail img-prod-int"></a>
-              <a href="#"><img src="../img/t4.jpg" alt="Set accesorios 71 piezas d-47189 Makita" class="img-thumbnail img-prod-int"></a>
+              <div class="row">
+                <div class="col-sm-6 col-md-4">
+                  <div class="thumbnail">
+                    <img class="img-prod-int" src="../img/t1.jpg" alt="Esmeril agular 115mm GA4534">
+                    <div class="caption">
+                      <p>Esmeril agular 115mm GA4534</p>
+                      <p><a href="#" class="btn btn-primary" role="button">Ir al producto</a></p>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-sm-6 col-md-4">
+                  <div class="thumbnail">
+                    <img class="img-prod-int" src="../img/t2.jpg" alt="Taladadro percutor 13 mm 710 w">
+                    <div class="caption">
+                      <p>Taladadro percutor 13 mm 710 w</p>
+                      <p><a href="#" class="btn btn-primary" role="button">Ir al producto</a></p>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-sm-6 col-md-4">
+                  <div class="thumbnail">
+                    <img class="img-prod-int" src="../img/t3.jpg" alt="Taladro inalambrico percutor">
+                    <div class="caption">
+                      <p>Taladro inalambrico percutor</p>
+                      <p><a href="#" class="btn btn-primary" role="button">Ir al producto</a></p>
+                    </div>
+                  </div>
+                </div>
+              </div>
              </div>';
             break;
 
             case 'lavadora':
               echo '<img src="../img/lavadora.jpg" alt="Lavadora carga superior 12 Kg WA12F5L4 blanco Samsung" class="img-thumbnail img-prod">
               <h3>Lavadora carga superior 12 Kg WA12F5L4 blanco Samsung</h3>
-              <table class="table table-hover">
+              <table class="table table-hover table-bordered">
                 <thead>
                   <tr>
                     <th>#</th>
@@ -140,7 +193,7 @@
                   </tr>
                 </thead>
                 <tbody>
-                  <tr>
+                  <tr class="warning">
                     <td>1</td>
                     <td>Sodimac</td>
                     <td>$189.990</td>
@@ -154,15 +207,32 @@
                   </tr>
                 </tbody>
               </table>
-
               <h4>Te podría interesar.</h4>
-              <a href="#"><img src="../img/l1.jpg" alt="Lavadora carga superior 22 Kg WA22F9A8DSP/ZS Samsung" class="img-thumbnail img-prod-int"></a>
-              <a href="#"><img src="../img/l2.jpg" alt="Lavadora carga superior 15 Kg Active dual wash blanca Samsung" class="img-thumbnail img-prod-int"></a>
+              <div class="row">
+                <div class="col-sm-6 col-md-4">
+                  <div class="thumbnail">
+                    <img class="img-prod-int" src="../img/l1.jpg" alt="Lavadora carga superior 22 Kg WA22F9A8DSP/ZS Samsung">
+                    <div class="caption">
+                      <p>Lavadora carga superior 22 Kg WA22F9A8DSP/ZS Samsung</p>
+                      <p><a href="#" class="btn btn-primary" role="button">Ir al producto</a></p>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-sm-6 col-md-4">
+                  <div class="thumbnail">
+                    <img class="img-prod-int" src="../img/l2.jpg" alt="Lavadora carga superior 15 Kg Active dual wash blanca Samsung">
+                    <div class="caption">
+                      <p>Lavadora carga superior 15 Kg Active dual wash blanca Samsung</p>
+                      <p><a href="#" class="btn btn-primary" role="button">Ir al producto</a></p>
+                    </div>
+                  </div>
+                </div>                
+              </div>
              </div>';
             break;
           
           default:
-            echo "<h3>No tenemos registro del producto mencionado</h3>";
+            echo "<h3>No tenemos registros del producto que buscas</h3>";
             break;
         }
       ?>
@@ -180,5 +250,10 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <!-- Include all compiled plugins (below), or include individual files as needed -->
     <script src="../js/bootstrap.min.js"></script>
+    <!-- Material Design Bootstrap -->
+    <script src="../MDB/js/mdb.min.js" type="text/javascript"></script>
+    <!-- Chart Productos -->
+    <script src="../js/play.js" type="text/javascript"></script>
+    <script src="../js/taladro.js" type="text/javascript"></script>
   </body>
 </html>
