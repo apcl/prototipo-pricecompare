@@ -46,7 +46,7 @@ $(function () {
     };
    
     var option = {
-    responsive: true,
+    responsive: false
     };
    
     // Get the context of the canvas element we want to select
