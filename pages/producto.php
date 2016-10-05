@@ -37,7 +37,7 @@
               </div>
               <button type="submit" class="btn btn-primary">Buscar</button>
             </form>
-            <button type="button" class="btn btn-default navbar-btn " style="margin-left: 15%;">Login</button>
+            <button type="button" class="btn btn-default navbar-btn " style="margin-left: 15%;"><a href="login.html">Login</a></button>
         </div>
       </nav>
     </div>
