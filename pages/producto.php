@@ -298,7 +298,21 @@
     <!-- Include all compiled plugins (below), or include individual files as needed -->
     <script src="../js/bootstrap.min.js"></script>
     <!-- Material Design Bootstrap -->
-    <script src="../MDB/js/mdb.min.js" type="text/javascript"></script>    
+    <script src="../MDB/js/mdb.min.js" type="text/javascript"></script>
+
+    <!-- Chart Productos -->
+    <?php 
+      $prod = $_POST["producto"];
+      if ($prod == 'play' || $prod == 'playstation' || $prod == 'playstation4') {
+        echo '<script src="../js/play.js" type="text/javascript"></script>';
+      }
+      elseif ($prod == 'taladro' || $prod == 'makita' || $prod == 'herramienta') {
+        echo '<script src="../js/taladro.js" type="text/javascript"></script>';
+      }
+      elseif ($prod == 'lavadora' || $prod == 'linea blanca' || $prod == 'samsung') {
+        echo '<script src="../js/lavadora.js" type="text/javascript"></script>';
+      }
+     ?>
     
   </body>
 </html>
