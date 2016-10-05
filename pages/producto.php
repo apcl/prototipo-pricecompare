@@ -57,9 +57,16 @@
           $prod = 'taladro';
         }
 
+        if ($prod == 'lavadora' || $prod == 'linea blanca' || $prod == 'samsung'){
+          $prod = 'lavadora';
+        }
+
         switch ($prod) {
           case 'play':
               echo '
+
+              <script src="../js/play.js" type="text/javascript"></script>
+
               <nav style="margin-top: 4em; margin-bottom: 8em;">
                 <nav id="prod-img" style="float: left;margin-right: 100px;">
                   <img src="../img/ps4.jpg" alt="Playstation 4" class="img-thumbnail img-prod">
@@ -140,6 +147,9 @@
 
           case 'taladro':
               echo '
+
+              <script src="../js/taladro.js" type="text/javascript"></script>
+
               <nav style="margin-top: 4em; margin-bottom: 8em;">
                 <nav id="prod-img" style="float: left;margin-right: 100px;">
                   <img src="../img/taladro.jpg" alt="Taladro percutor 20 mm 1010 w hp 2070 f Makita" class="img-thumbnail img-prod">
@@ -208,6 +218,9 @@
 
             case 'lavadora':
               echo '
+
+              <script src="../js/lavadora.js" type="text/javascript"></script>
+
               <nav style="margin-top: 4em; margin-bottom: 8em;">
                 <nav id="prod-img" style="float: left;margin-right: 100px;">
                   <img src="../img/lavadora.jpg" alt="Lavadora carga superior 12 Kg WA12F5L4 blanco Samsung" class="img-thumbnail img-prod">
@@ -285,25 +298,7 @@
     <!-- Include all compiled plugins (below), or include individual files as needed -->
     <script src="../js/bootstrap.min.js"></script>
     <!-- Material Design Bootstrap -->
-    <script src="../MDB/js/mdb.min.js" type="text/javascript"></script>
-    
-    <!-- Chart Productos -->
-    <?php 
-
-      $prod = $_POST["producto"];
-
-      if ($prod == 'play') {
-        echo '<script src="../js/play.js" type="text/javascript"></script>';
-      }
-      elseif ($prod == 'taladro') {
-        echo '<script src="../js/taladro.js" type="text/javascript"></script>';
-      }
-      elseif ($prod == 'lavadora') {
-        echo '<script src="../js/lavadora.js" type="text/javascript"></script>';
-      }
-
-     ?>
-    
+    <script src="../MDB/js/mdb.min.js" type="text/javascript"></script>    
     
   </body>
 </html>
