@@ -8,7 +8,7 @@
     <title>Price Compare</title>
 
     <!-- Bootstrap -->
-    <link href="../css/bootstrap.min.css" rel="stylesheet">
+    <link href="../css/bootstrap.css" rel="stylesheet">
 
     <!-- Material Design Bootstrap -->
     <!-- <link rel="stylesheet" type="text/css" href="../MDB/css/mdb.min.css"> -->
@@ -24,10 +24,22 @@
     <link rel="stylesheet" type="text/css" href="../css/estilo.css">
   </head>
   <body>
-    
-    <div class="container-fluid divindex">
-      <button type="button" class="btn btn-link login"><a href="login.html">Login</a></button>
-      <h2>Price Compare</h2>
+
+    <div class="container-fluid">
+      <nav class="navbar navbar-default">
+        <div class="container-fluid">
+          <div class="navbar-header">
+            <a class="navbar-brand" href="../index.html">Price Compare</a>
+          </div>
+            <form action="producto.php" method="POST" name="form" class="navbar-form navbar-left" role="search" style="margin-left: 20%";>
+              <div class="form-group">
+                <input type="text" name="producto" class="form-control" placeholder="Marca, Modelo, Características" style="width: 50rem;">
+              </div>
+              <button type="submit" class="btn btn-primary">Buscar</button>
+            </form>
+            <button type="button" class="btn btn-default navbar-btn " style="margin-left: 15%;">Login</button>
+        </div>
+      </nav>
     </div>
 
   	<div class="container-fluid divindex">      
@@ -47,8 +59,15 @@
 
         switch ($prod) {
           case 'play':
-              echo '<img src="../img/ps4.jpg" alt="Playstation 4" class="img-thumbnail img-prod">
-              <canvas id="Chart"></canvas>
+              echo '
+              <nav style="margin-top: 4em; margin-bottom: 8em;">
+                <nav id="prod-img" style="float: left;margin-right: 100px;">
+                  <img src="../img/ps4.jpg" alt="Playstation 4" class="img-thumbnail img-prod">
+                </nav>
+                <nav id="prod-graf">
+                  <canvas id="Chart"></canvas>
+                </nav>
+              </nav>
               <h3>PLAYSTATION 4 + UNCHARTED: THE NATHAN DRAKE COLLECTION</h3>
               <table class="table table-hover table-bordered">
                 <thead>
@@ -120,8 +139,15 @@
             break;
 
           case 'taladro':
-              echo '<div><img src="../img/taladro.jpg" alt="Taladro percutor 20 mm 1010 w hp 2070 f Makita" class="img-thumbnail img-prod">
-              <canvas id="Chart"></canvas></div>
+              echo '
+              <nav style="margin-top: 4em; margin-bottom: 8em;">
+                <nav id="prod-img" style="float: left;margin-right: 100px;">
+                  <img src="../img/taladro.jpg" alt="Taladro percutor 20 mm 1010 w hp 2070 f Makita" class="img-thumbnail img-prod">
+                </nav>
+                <nav id="prod-graf">
+                  <canvas id="Chart"></canvas>
+                </nav>
+              </nav>
               <h3>Taladro percutor 20 mm 1010 w hp 2070 f Makita</h3>
               <table class="table table-hover table-bordered">
                 <thead>
@@ -181,7 +207,15 @@
             break;
 
             case 'lavadora':
-              echo '<img src="../img/lavadora.jpg" alt="Lavadora carga superior 12 Kg WA12F5L4 blanco Samsung" class="img-thumbnail img-prod">
+              echo '
+              <nav style="margin-top: 4em; margin-bottom: 8em;">
+                <nav id="prod-img" style="float: left;margin-right: 100px;">
+                  <img src="../img/lavadora.jpg" alt="Lavadora carga superior 12 Kg WA12F5L4 blanco Samsung" class="img-thumbnail img-prod">
+                </nav>
+                <nav id="prod-graf">
+                  <canvas id="Chart"></canvas>
+                </nav>
+              </nav>
               <h3>Lavadora carga superior 12 Kg WA12F5L4 blanco Samsung</h3>
               <table class="table table-hover table-bordered">
                 <thead>
@@ -252,8 +286,24 @@
     <script src="../js/bootstrap.min.js"></script>
     <!-- Material Design Bootstrap -->
     <script src="../MDB/js/mdb.min.js" type="text/javascript"></script>
+    
     <!-- Chart Productos -->
-    <script src="../js/play.js" type="text/javascript"></script>
-    <script src="../js/taladro.js" type="text/javascript"></script>
+    <?php 
+
+      $prod = $_POST["producto"];
+
+      if ($prod == 'play') {
+        echo '<script src="../js/play.js" type="text/javascript"></script>';
+      }
+      elseif ($prod == 'taladro') {
+        echo '<script src="../js/taladro.js" type="text/javascript"></script>';
+      }
+      elseif ($prod == 'lavadora') {
+        echo '<script src="../js/lavadora.js" type="text/javascript"></script>';
+      }
+
+     ?>
+    
+    
   </body>
 </html>
