@@ -22,6 +22,10 @@
 
     <!-- Estilos apcl -->
     <link rel="stylesheet" type="text/css" href="../css/estilo.css">
+
+    <!-- Responsive -->
+    <link rel="stylesheet" type="text/css" href="../css/responsive.css">
+
   </head>
   <body>
 
@@ -29,15 +33,14 @@
       <nav class="navbar navbar-default">
         <div class="container-fluid">
           <div class="navbar-header">
-            <a class="navbar-brand" href="../index.html">Price Compare</a>
+            <a class="navbar-brand marca" href="../index.html">Price Compare</a>
           </div>
-            <form action="producto.php" method="POST" name="form" class="navbar-form navbar-left" role="search" style="margin-left: 20%";>
+            <form action="producto.php" method="POST" name="form" class="navbar-form navbar-left form-prod" role="search">
               <div class="form-group">
-                <input type="text" name="producto" class="form-control" placeholder="Marca, Modelo, Características" style="width: 50rem;">
+                <input type="text" name="producto" class="text-prod" placeholder="Marca, Modelo, Características">
               </div>
-              <button type="submit" class="btn btn-primary">Buscar</button>
+              <button type="submit" class="btn btn-primary btn-prod">Buscar</button>
             </form>
-            <button type="button" class="btn btn-default navbar-btn " style="margin-left: 15%;"><a href="login.html">Login</a></button>
         </div>
       </nav>
     </div>
@@ -67,7 +70,7 @@
 
               <script src="../js/play.js" type="text/javascript"></script>
 
-              <nav style="margin-top: 4em; margin-bottom: 8em;">
+              <nav class="nav-img-chart">
                 <nav id="prod-img" style="float: left;margin-right: 100px;">
                   <img src="../img/ps4.jpg" alt="Playstation 4" class="img-thumbnail img-prod">
                 </nav>
@@ -150,7 +153,7 @@
 
               <script src="../js/taladro.js" type="text/javascript"></script>
 
-              <nav style="margin-top: 4em; margin-bottom: 8em;">
+              <nav class="nav-img-chart">
                 <nav id="prod-img" style="float: left;margin-right: 100px;">
                   <img src="../img/taladro.jpg" alt="Taladro percutor 20 mm 1010 w hp 2070 f Makita" class="img-thumbnail img-prod">
                 </nav>
@@ -221,7 +224,7 @@
 
               <script src="../js/lavadora.js" type="text/javascript"></script>
 
-              <nav style="margin-top: 4em; margin-bottom: 8em;">
+              <nav class="nav-img-chart">
                 <nav id="prod-img" style="float: left;margin-right: 100px;">
                   <img src="../img/lavadora.jpg" alt="Lavadora carga superior 12 Kg WA12F5L4 blanco Samsung" class="img-thumbnail img-prod">
                 </nav>
