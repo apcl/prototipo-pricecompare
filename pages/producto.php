@@ -49,7 +49,7 @@
       
       <?php 
         if ($_POST){
-            $prod = $_POST["producto"];
+            $prod = ltrim(rtrim(strtolower($_POST["producto"])));
         }
 
         if ($prod == 'play' || $prod == 'playstation' || $prod == 'playstation4'){
@@ -305,7 +305,7 @@
 
     <!-- Chart Productos -->
     <?php 
-      $prod = $_POST["producto"];
+      $prod = ltrim(rtrim(strtolower($_POST["producto"])));
       if ($prod == 'play' || $prod == 'playstation' || $prod == 'playstation4') {
         echo '<script src="../js/play.js" type="text/javascript"></script>';
       }
